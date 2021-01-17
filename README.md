@@ -50,6 +50,13 @@ Use the below command to install or refer to [this guide](https://docs.docker.co
 curl -fsSL get.docker.com | sudo bash
 ```
 
+You can use the following command to use pre-built image or build your own.
+
+```bash
+docker run --rm -ti --privileged --net=host ghcr.io/jadia/bluetooth_battery_level:latest "E4:41:22:6B:4F:19"
+```
+
+
 Clone the repository using `git clone` command.
 
 ```bash
@@ -63,6 +70,7 @@ Once the build is complete you can use the below command to run the program:
 docker run --rm -ti --privileged --net=host bluetooth_battery_level "BT_MAC_ADDRESS"
 #docker run --rm -ti --privileged --net=host bluetooth_battery_level "E2:41:23:5C:4F:27"
 ```
+
 ### It didn't work?
 
 You can set the port number manually by adding a dot at the end of mac address, like this: `00:00:00:00:00:00.3`
